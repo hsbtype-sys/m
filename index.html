@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="format-detection" content="telephone=no">
+<meta name="robots" content="noindex">
+<title>성범 & 슬비 결혼식에 초대합니다.</title>
+<meta property="og:title" content="성범&슬비 결혼식에 초대합니다.">
+<meta property="og:image" content="https://hsbtype-sys.github.io/wedding/main.jpg">
+<meta property="og:url" content="https://hsbtype-sys.github.io/wedding/">
+<meta property="og:type" content="website">
+<meta property="og:description" content="2027.3.20 SAT PM 12:00 노보텔 앰배서더 서울 강남">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#333; --muted:#666; --line:#e3e3e8; --purple:#8f9cf0;
+    --page:480px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%}
+  body{background:#e9e9ec;font-family:'Noto Sans KR',sans-serif;color:var(--ink);line-height:1.5}
+  #wrap{width:100%;max-width:var(--page);margin:0 auto;background:#fff;min-height:100vh;box-shadow:0 0 24px rgba(0,0,0,.08);overflow:hidden}
+  .serif{font-family:'Nanum Myeongjo',serif}
+
+  /* 1. 타이틀 */
+  .hero{padding:28px 20px 72px;text-align:center;background:#fff}
+  .hero .photo{display:block;width:100%;max-width:100%;height:auto;margin:0 auto 56px}
+  .hero .names{display:flex;align-items:center;justify-content:center;gap:0;font-size:29px;font-weight:700;letter-spacing:.39em;line-height:1.4}
+  .hero .names span{flex:1}
+  .hero .names span:first-child{text-align:right;padding-right:0}
+  .hero .names span:last-child{text-align:left}
+  .hero .names i{display:block;width:1px;height:22px;background:#d6d6da;margin:0 23px;flex:none}
+  .hero .date{margin-top:44px;font-size:18px;font-weight:700;letter-spacing:.07em}
+  .hero .venue{margin-top:4px;font-size:18px;font-weight:700}
+
+  /* 2. 인사말 */
+  .invite{background:#f4f4f4;padding:68px 24px 60px;text-align:center}
+  .invite .en{font-family:'Noto Sans KR',sans-serif;font-weight:300;color:#aaa;letter-spacing:.08em;font-size:15px;margin-bottom:42px}
+  .invite p{font-size:20.4px;line-height:2.3;letter-spacing:0}
+
+  /* 3. 연락처 */
+  .call{background:#f9f9fb;padding:56px 24px 64px}
+  .call .grid{display:grid;grid-template-columns:1fr 1fr}
+  .call dl{text-align:center}
+  .call dt{font-size:20px;font-weight:700;margin-bottom:16px}
+  .call dd{display:inline-block;margin:0 10px}
+  .ico{width:26px;height:26px;stroke:#888;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;vertical-align:middle}
+  .call .more{display:block;margin:50px auto 18px;border:0;background:none;font-family:inherit;font-size:15px;color:#777;cursor:pointer}
+  .call .more::after{content:"";display:inline-block;margin-left:10px;border:6px solid transparent;border-bottom:8px solid #777;border-top:0;vertical-align:middle;transition:transform .2s}
+  .call .more.closed::after{transform:rotate(180deg)}
+  .call .hosts{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:28px}
+  .call .hosts.hide{display:none}
+  .call .hosts h3{text-align:center;font-weight:400;font-size:15px;color:#777;margin-bottom:22px}
+  .call .person{display:flex;flex-direction:column;align-items:center;margin-bottom:28px}
+  .call .person p{font-size:14px;color:#888}
+  .call .person .name{font-size:19px;font-weight:700;color:#222;margin-left:8px}
+  .call .person .btns{margin-top:10px}
+  .call .person .btns .ico{width:22px;height:22px;margin:0 8px}
+
+  /* 4. RSVP */
+  .rsvp{background:#f4f4f4;padding:68px 24px 80px;text-align:center}
+  .rsvp h3{font-size:16px;font-weight:400;color:#777;margin-bottom:26px}
+  .rsvp p{font-size:16.5px;line-height:1.9}
+  .btn{display:block;width:100%;border:0;border-radius:4px;font-family:inherit;font-size:16px;font-weight:700;color:#fff;background:var(--purple);padding:16px;margin-top:32px;cursor:pointer}
+
+  /* 5. 위치 */
+  .place{background:#fff;padding:64px 24px 56px;text-align:center}
+  .place .en{font-weight:300;color:#aaa;letter-spacing:.08em;font-size:15px;margin-bottom:30px}
+  .place h2{font-size:22px;font-weight:700;line-height:1.5}
+  .place .addr{margin-top:14px;font-size:15px;color:#555}
+  .place .tel{font-size:15px;color:#555}
+  .place .map{position:relative;display:block;margin-top:26px;border-radius:8px;overflow:hidden;border:1px solid var(--line);aspect-ratio:900/640;max-width:100%;background:#eee}
+  .place .map img,.place .map #kmap{display:block;width:100%;height:100%;object-fit:cover}
+  .place .map #kmap{position:absolute;inset:0}
+  .place .map .attr{position:absolute;right:6px;bottom:4px;font-size:10px;color:#555;background:rgba(255,255,255,.75);padding:1px 5px;border-radius:3px}
+  .place .map .hint{position:absolute;left:8px;top:8px;font-size:12px;color:#333;background:rgba(255,255,255,.9);padding:4px 9px;border-radius:12px}
+  .place .maps{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:28px}
+  .place .maps a{display:block;border:1px solid var(--line);border-radius:6px;padding:12px 0;color:#444;text-decoration:none;font-size:14px}
+  .place .info{margin-top:36px;text-align:left;border-top:1px solid var(--line)}
+  .place .info div{padding:18px 4px;border-bottom:1px solid var(--line)}
+  .place .info b{display:block;font-size:14px;margin-bottom:4px}
+  .place .info span{font-size:14px;color:#555}
+
+  /* 6. 계좌 */
+  .acct{background:#f9f9fb;padding:60px 24px 64px;text-align:center}
+  .acct h3{font-size:17px;font-weight:700;margin-bottom:24px}
+  .acct .tabs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px}
+  .acct .tabs button{border:1px solid var(--line);background:#fff;border-radius:6px;padding:14px 0;font-family:inherit;font-size:15px;cursor:pointer}
+  .acct .tabs button[aria-expanded=true]{background:#eef0ff;border-color:var(--purple);color:#4452c8;font-weight:700}
+  .acct .panel{display:none;background:#fff;border:1px solid var(--line);border-radius:6px;padding:8px 16px;text-align:left}
+  .acct .panel.open{display:block}
+  .acct .row{padding:14px 0;border-bottom:1px solid #eee}
+  .acct .row:last-child{border:0}
+  .acct .row small{display:block;color:#888;font-size:13px}
+  .acct .row strong{font-size:16px}
+  .acct .row .copy{float:right;margin-top:-26px;border:1px solid var(--line);background:#fff;border-radius:4px;padding:6px 10px;font-size:12px;cursor:pointer;font-family:inherit}
+
+  footer{padding:36px 24px 60px;text-align:center;font-size:12px;color:#aaa;background:#fff}
+
+  /* 모달 */
+  .modal{position:fixed;inset:0;background:rgba(0,0,0,.55);display:none;align-items:center;justify-content:center;z-index:50;padding:20px}
+  .modal.open{display:flex}
+  .sheet{background:#fff;width:100%;max-width:420px;border-radius:12px;padding:28px 22px;max-height:90vh;overflow:auto}
+  .sheet h4{font-size:18px;text-align:center;margin-bottom:20px}
+  .sheet label{display:block;font-size:14px;color:#555;margin:14px 0 6px}
+  .sheet input[type=text],.sheet input[type=number]{width:100%;border:1px solid #d6d6da;border-radius:6px;padding:12px;font-size:15px;font-family:inherit}
+  .seg{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+  .seg.two{grid-template-columns:repeat(2,1fr)}
+  .seg label{margin:0;border:1px solid #d6d6da;border-radius:6px;text-align:center;padding:11px 0;cursor:pointer;font-size:14px;color:#444}
+  .seg input{display:none}
+  .seg label:has(input:checked){background:#eef0ff;border-color:var(--purple);color:#4452c8;font-weight:700}
+  .sheet .actions{display:grid;grid-template-columns:1fr 2fr;gap:8px;margin-top:24px}
+  .sheet .actions .btn{margin:0}
+  .sheet .actions .ghost{background:#eee;color:#555}
+  .agree{display:flex;align-items:center;gap:8px;margin-top:16px;font-size:13px;color:#666}
+  .toast{position:fixed;left:50%;bottom:40px;transform:translateX(-50%);background:rgba(30,30,30,.9);color:#fff;font-size:14px;padding:11px 18px;border-radius:20px;opacity:0;pointer-events:none;transition:opacity .25s;z-index:60}
+  .toast.show{opacity:1}
+</style>
+</head>
+<body>
+<div id="wrap">
+
+  <!-- 타이틀 (사진 영역은 제외) -->
+  <section class="hero serif">
+    <img class="photo" src="main.jpg" alt="신랑 홍성범, 신부 양슬비">
+    <div class="names"><span>성범</span><i></i><span>슬비</span></div>
+    <div class="date">2027.03.20 SAT PM 12:00</div>
+    <div class="venue">노보텔 앰배서더 서울 강남 2층 샴페인홀</div>
+  </section>
+
+  <!-- 인사말 -->
+  <section class="invite serif">
+    <div class="en">INVITATION</div>
+    <p>서로가 마주보며 다져온 사랑을<br>이제 함께 한 곳을 바라보며<br>걸어갈 수 있는 큰 사랑으로 키우고자 합니다.<br>저희 두 사람이 사랑의 이름으로<br>지켜나갈 수 있게 앞날을<br>축복해 주시면 감사하겠습니다.</p>
+  </section>
+
+  <!-- 연락처 -->
+  <section class="call">
+    <div class="grid">
+      <dl><dt>신랑</dt><dd><svg class="ico" data-i="call"></svg></dd><dd><svg class="ico" data-i="sms"></svg></dd></dl>
+      <dl><dt>신부</dt><dd><svg class="ico" data-i="call"></svg></dd><dd><svg class="ico" data-i="sms"></svg></dd></dl>
+    </div>
+    <button class="more" id="moreBtn" type="button">신랑 · 신부 측 혼주</button>
+    <div class="hosts" id="hosts">
+      <div>
+        <h3>신랑 측 혼주</h3>
+        <div class="person"><div><p style="display:inline">아버지</p><span class="name">홍상표</span></div><div class="btns"><svg class="ico" data-i="call"></svg><svg class="ico" data-i="sms"></svg></div></div>
+        <div class="person"><div><p style="display:inline">어머니</p><span class="name">노미경</span></div><div class="btns"><svg class="ico" data-i="call"></svg><svg class="ico" data-i="sms"></svg></div></div>
+      </div>
+      <div>
+        <h3>신부 측 혼주</h3>
+        <div class="person"><div><p style="display:inline">아버지</p><span class="name">양대현</span></div><div class="btns"><svg class="ico" data-i="call"></svg><svg class="ico" data-i="sms"></svg></div></div>
+        <div class="person"><div><p style="display:inline">어머니</p><span class="name">박정자</span></div><div class="btns"><svg class="ico" data-i="call"></svg><svg class="ico" data-i="sms"></svg></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 참석여부 -->
+  <section class="rsvp">
+    <h3 class="serif">참석여부 확인</h3>
+    <p class="serif">축하의 마음으로 참석해 주실<br>모든 분을 정중히 모시고자 하오니,<br>참석 여부를 알려주시면 감사하겠습니다.</p>
+    <button class="btn" type="button" id="rsvpOpen">참석여부 확인</button>
+  </section>
+
+  <!-- 위치 -->
+  <section class="place">
+    <div class="en">LOCATION</div>
+    <h2 class="serif">노보텔 앰배서더 서울 강남<br>2층 샴페인홀</h2>
+    <p class="addr">서울 강남구 봉은사로 130</p>
+    <p class="tel">02-567-1101</p>
+    <a class="map" id="mapBox" target="_blank" rel="noopener" href="https://map.kakao.com/link/map/%EB%85%B8%EB%B3%B4%ED%85%94%20%EC%95%B0%EB%B0%B0%EC%84%9C%EB%8D%94%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8,37.5051522,127.0289290" aria-label="카카오맵에서 위치 보기">
+      <img src="map.png" alt="노보텔 앰배서더 서울 강남 위치 지도 (봉은사로 130, 신논현역 인근)">
+      <span class="hint">탭하면 카카오맵에서 열려요</span>
+      <span class="attr">© OpenStreetMap contributors</span>
+    </a>
+    <div class="maps">
+      <a target="_blank" rel="noopener" href="https://map.naver.com/p/search/%EB%85%B8%EB%B3%B4%ED%85%94%20%EC%95%B0%EB%B0%B0%EC%84%9C%EB%8D%94%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8">네이버 지도</a>
+      <a target="_blank" rel="noopener" href="https://map.kakao.com/link/to/%EB%85%B8%EB%B3%B4%ED%85%94%20%EC%95%B0%EB%B0%B0%EC%84%9C%EB%8D%94%20%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8,37.5051522,127.0289290">카카오맵 길찾기</a>
+      <a target="_blank" rel="noopener" href="https://tmap.life/">티맵</a>
+    </div>
+    <div class="info">
+      <div><b>주차 안내</b><span>호텔 내 3시간 무료주차</span></div>
+      <div><b>대중교통 이용시</b><span>신논현역 4번 출구에서 도보 5분</span></div>
+    </div>
+  </section>
+
+  <!-- 계좌 (은행·계좌번호는 직접 입력) -->
+  <section class="acct">
+    <h3 class="serif">마음 전하실 곳</h3>
+    <div class="tabs">
+      <button type="button" aria-expanded="false" data-p="p1">신랑 측 계좌번호</button>
+      <button type="button" aria-expanded="false" data-p="p2">신부 측 계좌번호</button>
+    </div>
+    <div class="panel" id="p1">
+      <div class="row"><small>신랑</small><strong>홍성범</strong><button class="copy" data-acct="은행 계좌번호">복사</button><div style="margin-top:4px;color:#888;font-size:14px">은행 · 계좌번호 입력</div></div>
+      <div class="row"><small>신랑 혼주</small><strong>홍상표</strong><button class="copy" data-acct="은행 계좌번호">복사</button><div style="margin-top:4px;color:#888;font-size:14px">은행 · 계좌번호 입력</div></div>
+    </div>
+    <div class="panel" id="p2">
+      <div class="row"><small>신부</small><strong>양슬비</strong><button class="copy" data-acct="은행 계좌번호">복사</button><div style="margin-top:4px;color:#888;font-size:14px">은행 · 계좌번호 입력</div></div>
+      <div class="row"><small>신부 혼주</small><strong>양대현</strong><button class="copy" data-acct="은행 계좌번호">복사</button><div style="margin-top:4px;color:#888;font-size:14px">은행 · 계좌번호 입력</div></div>
+    </div>
+  </section>
+
+  <footer>성범 & 슬비 · 2027.03.20</footer>
+</div>
+
+<!-- RSVP 모달 -->
+<div class="modal" id="rsvpModal" role="dialog" aria-modal="true" aria-label="참석여부 확인">
+  <form class="sheet" id="rsvpForm">
+    <h4 class="serif">참석여부 확인</h4>
+    <label>구분</label>
+    <div class="seg two"><label><input type="radio" name="side" value="신랑" checked>신랑</label><label><input type="radio" name="side" value="신부">신부</label></div>
+    <label for="nm">성함</label>
+    <input type="text" id="nm" required>
+    <label for="cnt">참석인원</label>
+    <input type="number" id="cnt" min="1" max="20" value="1">
+    <label>식사여부</label>
+    <div class="seg"><label><input type="radio" name="meal" value="예정" checked>예정</label><label><input type="radio" name="meal" value="안함">안함</label><label><input type="radio" name="meal" value="미정">미정</label></div>
+    <label class="agree"><input type="checkbox" id="agree" required> 개인정보 수집 및 이용에 동의합니다. (필수)</label>
+    <div class="actions"><button class="btn ghost" type="button" id="rsvpClose">닫기</button><button class="btn" type="submit">전달하기</button></div>
+  </form>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+  // 아이콘
+  var ICONS={
+    call:'<path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/>',
+    sms:'<rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="M3 6l9 7 9-7"/>'
+  };
+  document.querySelectorAll('svg[data-i]').forEach(function(s){
+    s.setAttribute('viewBox','0 0 24 24'); s.innerHTML=ICONS[s.dataset.i];
+  });
+  function toast(m){var t=document.getElementById('toast');t.textContent=m;t.classList.add('show');setTimeout(function(){t.classList.remove('show')},1800)}
+
+  // 혼주 접기/펼치기
+  var hosts=document.getElementById('hosts'),moreBtn=document.getElementById('moreBtn');
+  moreBtn.addEventListener('click',function(){hosts.classList.toggle('hide');moreBtn.classList.toggle('closed')});
+
+  // 계좌 탭
+  document.querySelectorAll('.tabs button').forEach(function(b){
+    b.addEventListener('click',function(){
+      var open=b.getAttribute('aria-expanded')==='true';
+      document.querySelectorAll('.tabs button').forEach(function(x){x.setAttribute('aria-expanded','false')});
+      document.querySelectorAll('.panel').forEach(function(p){p.classList.remove('open')});
+      if(!open){b.setAttribute('aria-expanded','true');document.getElementById(b.dataset.p).classList.add('open')}
+    });
+  });
+  document.querySelectorAll('.copy').forEach(function(b){
+    b.addEventListener('click',function(){
+      (navigator.clipboard?navigator.clipboard.writeText(b.dataset.acct):Promise.reject()).then(function(){toast('복사되었습니다')},function(){toast('복사할 수 없습니다')});
+    });
+  });
+
+  // RSVP (서버 연동 없음 — 화면 동작만)
+  var modal=document.getElementById('rsvpModal');
+  document.getElementById('rsvpOpen').addEventListener('click',function(){modal.classList.add('open')});
+  document.getElementById('rsvpClose').addEventListener('click',function(){modal.classList.remove('open')});
+  modal.addEventListener('click',function(e){if(e.target===modal)modal.classList.remove('open')});
+  document.getElementById('rsvpForm').addEventListener('submit',function(e){
+    e.preventDefault(); modal.classList.remove('open'); toast('참석 의사가 전달되었습니다 (데모)'); this.reset();
+  });
+</script>
+
+<script>
+  // 카카오맵 JavaScript 키를 넣으면 정적 지도 대신 실제 카카오 지도가 표시됩니다.
+  // developers.kakao.com > 내 애플리케이션 > 앱 키 > JavaScript 키, 그리고 플랫폼 > Web 에 사이트 도메인 등록 필요
+  var KAKAO_JS_KEY = '';
+  if (KAKAO_JS_KEY) {
+    var sc=document.createElement('script');
+    sc.src='https://dapi.kakao.com/v2/maps/sdk.js?autoload=false&appkey='+KAKAO_JS_KEY;
+    sc.onload=function(){ kakao.maps.load(function(){
+      var box=document.getElementById('mapBox'); box.removeAttribute('href');
+      box.querySelector('.hint').hidden=true; box.querySelector('.attr').hidden=true;
+      var el=document.createElement('div'); el.id='kmap'; box.appendChild(el);
+      var pos=new kakao.maps.LatLng(37.5051522,127.0289290);
+      var map=new kakao.maps.Map(el,{center:pos,level:3});
+      new kakao.maps.Marker({position:pos,map:map});
+      new kakao.maps.InfoWindow({content:'<div style="padding:6px 10px;font-size:13px;white-space:nowrap">노보텔 앰배서더 서울 강남</div>'}).open(map,new kakao.maps.Marker({position:pos}));
+      map.addControl(new kakao.maps.ZoomControl(),kakao.maps.ControlPosition.RIGHT);
+    });};
+    document.body.appendChild(sc);
+  }
+</script>
+</body>
+</html>
